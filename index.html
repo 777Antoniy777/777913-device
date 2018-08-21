@@ -11,28 +11,25 @@
     <h1 class="visually-hidden">Магазин Девайс</h1>
     <!--Хедер сайта-->
     <header class="main-header">
+     <nav class="main-navigation">
       <a class="main-logo">
       <img src="img/svg/logo.svg" width="164" height="36" alt="Магазин Device">
       </a>
       <!--Главная навигация-->
-      <nav class="main-navigation">
-        <h2 class="visually-hidden">Меню пользователя</h2>
-        <ul class="user-navigation-list">
-          <li class="user-navigation-item">
+        <div class="user-navigation-wrapper">
+           <h2 class="visually-hidden">Поиск по сайту</h2>
             <form class="user-navigation-form-search" method="get" action="https://echo.htmlacademy.ru">
               <label for="search" class="visually-hidden">Поиск по сайту</label>
               <input class="user-navigation-search" type="search" name="search" id="search" placeholder="Поиск по сайту">
-              <button type="button">Найти</button>
+              <button class="button-search" type="button">Найти</button>
             </form>
-          </li>
+        <h2 class="visually-hidden">Меню пользователя</h2>
+        <ul class="user-navigation-list">
           <li class="user-navigation-item"><a class="user-navigation-link-entry" href="#">Войти</a></li>
-          <li class="user-navigation-item">
-            <ul class="basket-navigation-list">
-              <li class="basket-navigation-item"><a class="basket-navigation-link-compare" href="#">Сравнить</a></li>
-              <li class="basket-navigation-item"><a class="basket-navigation-link-basket" href="#">Корзина</a></li>
-            </ul>
-          </li>
+          <li class="user-navigation-item"><a class="user-navigation-link-compare" href="#">Сравнить</a></li>
+          <li class="user-navigation-item"><a class="user-navigation-link-basket" href="#">Корзина</a></li>
         </ul>
+       </div>
         <h2 class="visually-hidden">Меню навигации по сайту</h2>
         <ul class="site-navigation-list">
           <li class="site-navigation-catalog-item">
@@ -54,12 +51,8 @@
             </div>
             </div>
           </li>
-          <li class="site-navigation-item">
-            <ul class="site-guarantees-list">
-              <li class="site-guarantees-item"><a href="#">Доставка</a></li>
-              <li class="site-guarantees-item"><a href="#">Гарантия</a></li>
-            </ul>
-          </li>
+          <li class="site-navigation-item"><a href="#">Доставка</a></li>
+          <li class="site-navigation-item"><a href="#">Гарантия</a></li>
           <li class="site-navigation-item"><a href="#">Контакты</a></li>
         </ul>
       </nav>
@@ -265,40 +258,32 @@
       </div>
     </main>
     <!--Футер сайта-->
-    <div class="site-wrapper">
     <footer class="main-footer">
+     <div class="site-wrapper">
       <!--Блок польователя в подвале-->
       <div class="footer-user-wrapper">
-        <a>
-        <img src="" width="" height="" alt="Магазин Device">
+        <a class="footer-logo">
+        <img src="img/svg/logo-footer.svg" width="164" height="36" alt="Магазин Device">
         </a>
         <h3 class="visually-hidden">Меню пользователя</h3>
         <ul class="footer-user-list">
-          <li class="footer-user-item"><a href="#">Войти</a></li>
-          <li>
-            <ul class="footer-basket-list">
-              <li class="footer-basket-item"><a href="#">Сравнить</a></li>
-              <li class="footer-basket-item"><a href="#">Корзина</a></li>
-            </ul>
-          </li>
+          <li class="footer-user-item"><a class="footer-user-link-entry" href="#">Войти</a></li>
+          <li class="footer-user-item"><a class="footer-user-link-compare" href="#">Сравнить</a></li>
+          <li class="footer-user-item"><a class="footer-user-link-basket" href="#">Корзина</a></li>
         </ul>
       </div>
       <!--Блок поиска по сайту в подвале-->
       <div class="footer-site-wrapper">
         <h3 class="visually-hidden">Адрес</h3>
-        <p>г. Москва, ул. Строителей, 15</p>
+        <p class="footer-adress">г. Москва, ул. Строителей, 15</p>
         <h3 class="visually-hidden">Меню навигации по сайту</h3>
         <ul class="footer-site-list">
-          <li class="footer-site-element">
-            <ul class="footer-site-guarantees-list">
-              <li><a href="#">Доставка</a></li>
-              <li><a href="#">Гарантия</a></li>
-            </ul>
-          </li>
-          <li class="footer-site-element"><a href="#">Контакты</a></li>
+          <li class="footer-site-item"><a href="#">Доставка</a></li>
+          <li class="footer-site-item"><a href="#">Гарантия</a></li>
+          <li class="footer-site-item"><a href="#">Контакты</a></li>
         </ul>
         <h3 class="visually-hidden">Телефон</h3>
-        <p><a href="tel:+74954959595">Тел.:+7(495)495-95-95</a></p>
+        <p><a class="footer-phone-link" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></p>
       </div>
       <!--Копки соцсетей-->
       <div class="footer-social-wrapper">
@@ -326,29 +311,35 @@
         <!--Логотип HTML Academy-->
         <aside class="footer-copyright">
           <a href="#">
-          <img src="" width="" height="" alt="HTML Academy">
+          <img src="img/svg/logo-html.svg" width="27" height="35" alt="HTML Academy">
           </a>
         </aside>
       </div>
+      </div>
     </footer>
-    </div>
     <!--Попап обратной связи-->
     <div class="feedback">
     <!--содержание в виде формы-->
-      <button type="button"><span class="visually-hidden">Закрыть</span></button>
+      <button class="button-close" type="button"><span class="visually-hidden">Закрыть</span></button>
       <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
-        <label for="name">Ваше имя:</label> 
+        <label class="feedback-name-title">Ваше имя: 
         <input class="feedback-name" type="text" name="name" id="name" placeholder="Имя Фамилия">
-        <label for="email">Ваш e-mail:</label> 
+        </label>
+        <label class="feedback-email-title">Ваш e-mail:
         <input class="feedback-email" type="email" name="email" id="email" placeholder="email@example.com">
-        <label for="comment">Текст письма:</label> 
+        </label> 
+        <label class="feedback-comment-title">Текст письма:
         <textarea class="feedback-comment" name="comment" id="comment" placeholder="В свободной форме"></textarea>
-        <button type="submit">Отправить</button>
+        </label> 
+        <div class="feedback-button-wrapper">
+        <button class="button button-submit" type="submit">Отправить</button>
+        </div>
       </form>
     </div>
     <!--Попап карты-->
-    <div class="map">
-      <button type="button"><span class="visually-hidden">Закрыть</span></button>
+    <div class="map-popup">
+      <button class="button-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <img src="img/map-big.jpg" width="960" height="559" alt="ул.Строителей, 15">
       <!--карта через iframe-->
     </div>
   </body>
