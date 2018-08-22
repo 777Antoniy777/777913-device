@@ -310,20 +310,19 @@ a {
   height: 12px;
 }
 
-.site-navigation-list {
+.site-navigation-catalog-item {
   position: relative;
 }
 
-.site-navigation-catalog-item::after {
+.site-navigation-catalog-item::before {
   content: "";
   position: absolute;
-  background-image: url("../img/svg/plus.svg");
-  background-position: 0 0;
-  left: 0px;
-  top: 0px;
-  background-repeat: no-repeat;
+  background-image: url(../img/svg/plus.svg);
+  right: -27px;
+  top: 4px;
   width: 16px;
   height: 16px;
+  opacity: 0.3;
 }
 
 .site-navigation-catalog-wrapper div {
@@ -345,7 +344,7 @@ a {
   width: 1160px;
   min-height: 167px;
   background-color: #f7e296;
-  z-index: 1;
+  z-index: 3;
 }
 
 .site-navigation-catalog-item:hover .site-navigation-catalog-wrapper {
@@ -418,8 +417,23 @@ a {
 .first-slider {
   position: relative;
   top: -111px;
-  margin: 0 20px;
+  margin: 0 20px 0 19px;
   padding: 0;
+}
+
+.first-slider-list .third-slide,
+.first-slider-list .second-slide {
+  display: none;
+}
+
+.first-slider::before {
+  content: "";
+  position: absolute;
+  top: 37px;
+  right: 460px;
+  width: 100px;
+  height: 7px;
+  background-color: white;
 }
 
 .first-slider-buttons {
@@ -468,26 +482,75 @@ a {
   letter-spacing: 0.4px;
 }
 
-.slide-item-description {
+.first-slider-item-wrapper .slide-item-description {
   font-family: "Open Sans";
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
+  color: #464646;
   margin: 0px;
   margin-left: 4px;
   letter-spacing: 0.01em;
 }
 
 .first-title {
+  position: relative;
   padding-right: 125px;
+  z-index: 1;
+}
+
+.first-title::after {
+  content: "01";
+  position: absolute;
+  font-family: "Gilroy";
+  font-size: 179.2px;
+  line-height: 179.2px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: white;
+  top: -93px;
+  right: 14px;
+  z-index: -1;
 }
 
 .second-title {
+  position: relative;
   padding-right: 90px;
+  z-index: 1;
+}
+
+.second-title::after {
+  content: "02";
+  position: absolute;
+  font-family: "Gilroy";
+  font-size: 179.2px;
+  line-height: 179.2px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: white;
+  top: -93px;
+  right: 14px;
+  z-index: -1;
 }
 
 .third-title {
+  position: relative;
   padding-right: 20px;
+  z-index: 1;
+}
+
+.third-title::after {
+  content: "03";
+  position: absolute;
+  font-family: "Gilroy";
+  font-size: 179.2px;
+  line-height: 179.2px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: white;
+  top: -93px;
+  right: 14px;
+  z-index: -1;
 }
 
 .first-description {
@@ -543,6 +606,7 @@ a {
   font-size: 13px;
   line-height: 20px;
   font-weight: 300;
+  color: #464646;
   margin-top: 4px;
   margin-left: 1px;
   letter-spacing: 0.01em;
@@ -562,18 +626,13 @@ a {
   margin: 0px 32px; 
 }
 
-.first-slider-list .third-slide,
-.first-slider-list .second-slide {
-  display: none;
-}
-
 .first-slider-item .first-slide-image {
-  margin-left: 58px;
+  margin-left: 59px;
 }
 
 .first-slider-item .second-slide-image {
-  margin-left: 84px;
-  margin-top: 11px;
+  margin-left: 85px;
+  margin-top: 12px;
 }
 
 .first-slider-item .third-slide-image {
@@ -615,6 +674,16 @@ a {
   background-color: #f7e296;
   margin: 0;
   margin-bottom: 33px;
+}
+
+.popular-goods-item p:hover,
+.popular-goods-item a:hover ~ p {
+  background-color: #f0c52e;
+}
+
+.popular-goods-item a:active,
+.popular-goods-item a:active ~ p img {
+  opacity: 0.3;
 }
 
 .popular-goods-item img {
@@ -719,6 +788,7 @@ a {
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
+  color: #464646;
   letter-spacing: 0.017em;
   margin: 0px;
 }
@@ -811,22 +881,27 @@ a {
   height: 100px;
   top: 0;
   left: 0;
+  z-index: 2;
 }
 
-.first-logo:hover::before {
-  background-image: url("../img/logo-1.jpg");
+.logos-item:hover::before {
+  display: none;
 }
 
-.second-logo:hover::before {
-  background-image: url("../img/logo-3.jpg");
+.first-logo::before {
+  background-image: url("../img/logo-1-black.jpg");
 }
 
-.third-logo:hover::before {
-  background-image: url("../img/logo-2.jpg");
+.second-logo::before {
+  background-image: url("../img/logo-3-black.jpg");
 }
 
-.forth-logo:hover::before {
-  background-image: url("../img/logo-4.jpg");
+.third-logo::before {
+  background-image: url("../img/logo-2-black.jpg");
+}
+
+.forth-logo::before {
+  background-image: url("../img/logo-4-black.jpg");
 }
 
 /*Блок информации*/
@@ -865,6 +940,7 @@ a {
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
+  color: #464646;
 }
 
 .about-description {
@@ -893,6 +969,14 @@ a {
   position: relative;
   font-size: 16px;
   line-height: 40px;
+}
+
+.about-item a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.about-item a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .about-item::before {
@@ -1152,8 +1236,8 @@ a {
   position: fixed;
   left: 0;
   top: 200px;
-  width: 960px;
-  height: 553px;
+  min-width: 960px;
+  min-height: 553px;
   font-size: 18px;
   line-height: 24px;
   margin: 0 352px;
