@@ -246,12 +246,18 @@ a {
   width: 355px;
   height: 49px;
   padding-left: 39px;
-  padding-bottom: 0px;
+  padding-bottom: 8px;
+  padding-top: 10px;
   border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #f7e296;
   outline: none;
+}
+
+_::-webkit-full-page-media, _:future, :root .user-navigation-search {
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
 
 .button-search {
@@ -555,6 +561,7 @@ a {
   position: absolute;
   width: 1px;
   height: 1px;
+  clip: rect(0 0 0 0);
 }
 
 .first-slider-list .third-slide,
@@ -617,6 +624,10 @@ a {
           animation-duration: 0.5s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
+}
+
+_:-ms-fullscreen, :root .first-slider #first-slider-third-button:checked ~ .first-slider-list .third-slide {
+  margin-bottom: 2px;
 }
 
 @-webkit-keyframes change {
@@ -686,6 +697,8 @@ a {
   background-position: 0 0;
   width: 12px;
   height: 12px;
+  top: 1px;
+  left: 0;
 }
 
 .first-slider-buttons label::after {
@@ -788,6 +801,10 @@ a {
   z-index: 1;
 }
 
+_:-ms-fullscreen, :root .third-title {
+  padding-right: 0px;
+}
+
 .third-title::after {
   content: "03";
   position: absolute;
@@ -867,6 +884,20 @@ a {
   letter-spacing: 0.01em;
 }
 
+_:-ms-fullscreen, :root .slide-item-table-item th {
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
 .slide-item-table-item td {
   font-size: 36px;
   line-height: 48px;
@@ -896,13 +927,25 @@ a {
   margin-left: 59px;
 }
 
+_:-ms-fullscreen, :root .first-slider-item .first-slide-image {
+  margin-right: 120px;
+}
+
 .first-slider-item .second-slide-image {
   margin-left: 85px;
   margin-top: 12px;
 }
 
+_:-ms-fullscreen, :root .first-slider-item .second-slide-image {
+  margin-right: 125px;
+}
+
 .first-slider-item .third-slide-image {
   margin-top: 65px;
+}
+
+_:-ms-fullscreen, :root .first-slider-item .third-slide-image {
+  margin-right: 20px;
 }
 
 .slide-item-link {
@@ -967,7 +1010,7 @@ a {
   background-color: #f0c52e;
 }
 
-.popular-goods-item a:active,
+.popular-goods-item a:active h3,
 .popular-goods-item a:active ~ p img {
   opacity: 0.3;
 }
@@ -986,6 +1029,10 @@ a {
   word-break: break-all;
 }
 
+_:-ms-fullscreen, :root .popular-goods-item h3 {
+  letter-spacing: 0em;
+}
+
 /*стили на оживление второго слайдера*/
 
 .slider-buttons-item label {
@@ -996,6 +1043,7 @@ a {
   position: absolute;
   width: 1px;
   height: 1px;
+  clip: rect(0 0 0 0);
 }
 
 .second-slider-list .third-slide,
@@ -1175,6 +1223,15 @@ a {
   letter-spacing: 0.017em;
   margin: 0px;
 }
+
+_:-ms-fullscreen, :root .second-slider-item:not(:nth-child(3)) .slide-item-description {
+  width: 450px;
+}
+
+_:-ms-fullscreen, :root .second-slider-item:nth-child(3) .slide-item-description {
+  width: 430px;
+}
+
 .second-slider-buttons-list .slider-buttons-item {
   position: relative;
   font-size: 18px;
@@ -1248,6 +1305,7 @@ a {
 
 .logos-link {
   display: inline-block;
+  vertical-align: top;
 }
 
 .logos-link div {
@@ -1415,6 +1473,7 @@ a {
 
 .map-link {
   display: inline-block;
+  vertical-align: top;
   outline: none;
 }
 
@@ -1520,8 +1579,8 @@ _:-ms-fullscreen, :root .main-footer {
 }
 
 _:-ms-fullscreen, :root .footer-site-list {
-  width: 490px;
-  margin-right: 100px;
+  width: 470px;
+  margin-right: 130px;
 }
 
 .footer-social-wrapper {
@@ -1668,6 +1727,7 @@ _:-ms-fullscreen, :root .footer-site-list {
 
 .footer-phone-link {
   display: inline-block;
+  vertical-align: top;
   margin-left: 37px;
 }
 
@@ -1758,48 +1818,48 @@ _:-ms-fullscreen, :root .footer-adress {
   0%   {margin-left:-10000px;}
   5%   {margin-left: -1500px;}
   10%  {margin-left: -1200px;}
-  15%  {margin-left:  -1150px;}
-  20%  {margin-left:  -1100px;}
-  25%  {margin-left:  -1050px;}
+  15%  {margin-left: -1150px;}
+  20%  {margin-left: -1100px;}
+  25%  {margin-left: -1050px;}
   30%  {margin-left: -1000px;}
-  35%  {margin-left: -950px;}
-  40%  {margin-left: -900px;}
-  45%  {margin-left: -850px;}
-  50%  {margin-left: -800px;}
-  55%  {margin-left: -750px;}
-  60%  {margin-left: -700px;}
-  65%  {margin-left: -650px;}
-  70%  {margin-left: -600px;}
-  75%  {margin-left: -550px;}
-  80%  {margin-left: -500px;}
-  85%  {margin-left: -450px;}
-  90%  {margin-left: -350px;}
-  95%  {margin-left: -400px;}
-  100% {margin-left: -480px;}
+  35%  {margin-left: -950px; }
+  40%  {margin-left: -900px; }
+  45%  {margin-left: -850px; }
+  50%  {margin-left: -800px; }
+  55%  {margin-left: -750px; }
+  60%  {margin-left: -700px; }
+  65%  {margin-left: -650px; }
+  70%  {margin-left: -600px; }
+  75%  {margin-left: -550px; }
+  80%  {margin-left: -500px; }
+  85%  {margin-left: -450px; }
+  90%  {margin-left: -350px; }
+  95%  {margin-left: -400px; }
+  100% {margin-left: -480px; }
 }
 
 @keyframes move-right {
   0%   {margin-left:-10000px;}
   5%   {margin-left: -1500px;}
   10%  {margin-left: -1200px;}
-  15%  {margin-left:  -1150px;}
-  20%  {margin-left:  -1100px;}
-  25%  {margin-left:  -1050px;}
+  15%  {margin-left: -1150px;}
+  20%  {margin-left: -1100px;}
+  25%  {margin-left: -1050px;}
   30%  {margin-left: -1000px;}
-  35%  {margin-left: -950px;}
-  40%  {margin-left: -900px;}
-  45%  {margin-left: -850px;}
-  50%  {margin-left: -800px;}
-  55%  {margin-left: -750px;}
-  60%  {margin-left: -700px;}
-  65%  {margin-left: -650px;}
-  70%  {margin-left: -600px;}
-  75%  {margin-left: -550px;}
-  80%  {margin-left: -500px;}
-  85%  {margin-left: -450px;}
-  90%  {margin-left: -350px;}
-  95%  {margin-left: -400px;}
-  100% {margin-left: -480px;}
+  35%  {margin-left: -950px; }
+  40%  {margin-left: -900px; }
+  45%  {margin-left: -850px; }
+  50%  {margin-left: -800px; }
+  55%  {margin-left: -750px; }
+  60%  {margin-left: -700px; }
+  65%  {margin-left: -650px; }
+  70%  {margin-left: -600px; }
+  75%  {margin-left: -550px; }
+  80%  {margin-left: -500px; }
+  85%  {margin-left: -450px; }
+  90%  {margin-left: -350px; }
+  95%  {margin-left: -400px; }
+  100% {margin-left: -480px; }
 }
 
 .feedback-form label {
@@ -1915,8 +1975,7 @@ _:-ms-fullscreen, :root .footer-adress {
 .feedback-email {
   width: 360px;
   height: 50px;
-  padding-left: 19px;
-  padding-bottom: 7px;
+  padding: 15px 0 18px 19px;
   margin-top: 8px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2074,6 +2133,32 @@ _:-ms-fullscreen, :root .footer-adress {
           animation-duration: 0.5s;
 }
 
+.
+
+@-webkit-keyframes move-left {
+  0%   {margin-right: -10000px;}
+  5%   {margin-right:  -1500px;}
+  10%  {margin-right:  -1200px;}
+  15%  {margin-right:  -1150px;}
+  20%  {margin-right:  -1100px;}
+  25%  {margin-right:  -1050px;}
+  30%  {margin-right:  -1000px;}
+  35%  {margin-right:  -950px;}
+  40%  {margin-right:  -900px;}
+  45%  {margin-right:  -850px;}
+  50%  {margin-right:  -800px;}
+  55%  {margin-right:  -750px;}
+  60%  {margin-right:  -700px;}
+  65%  {margin-right:  -650px;}
+  70%  {margin-right:  -600px;}
+  75%  {margin-right:  -550px;}
+  80%  {margin-right:  -500px;}
+  85%  {margin-right:  -450px;}
+  90%  {margin-right:  -350px;}
+  95%  {margin-right:  -400px;}
+  100% {margin-right:  -480px;}
+}
+
 @-webkit-keyframes move-left {
   0%   {margin-right: -10000px;}
   5%   {margin-right:  -1500px;}
@@ -2120,6 +2205,25 @@ _:-ms-fullscreen, :root .footer-adress {
   90%  {margin-right:  -350px;}
   95%  {margin-right:  -400px;}
   100% {margin-right:  -480px;}
+}
+
+.error-show {
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
+@-webkit-keyframes shake {
+  0%, 100%                 {-webkit-transform: translateX(0);transform: translateX(0);        }
+  10%, 30%, 50%, 70%, 90%  {-webkit-transform: translateX(-10px);transform: translateX(-10px);}
+  20%, 40%, 60%, 80%       {-webkit-transform: translateX(10px);transform: translateX(10px);  }
+}
+
+@keyframes shake {
+  0%, 100%                 {-webkit-transform: translateX(0);transform: translateX(0);        }
+  10%, 30%, 50%, 70%, 90%  {-webkit-transform: translateX(-10px);transform: translateX(-10px);}
+  20%, 40%, 60%, 80%       {-webkit-transform: translateX(10px);transform: translateX(10px);  }
 }
 
 /*стили для внутренней страницы*/
@@ -2359,6 +2463,7 @@ _:-ms-fullscreen, :root .footer-adress {
 }
 
 .filter-title {
+  position: relative;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.23em;
@@ -2700,7 +2805,7 @@ _:-ms-fullscreen, :root .footer-adress {
 
 .filter-title::before {
   top: 30px;
-  right: 281px;
+  right: -802px;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
