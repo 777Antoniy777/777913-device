@@ -2123,6 +2123,7 @@ _:-ms-fullscreen, :root .footer-adress {
   position: absolute;
   top: 0;
   left: 0;
+  border: 0;
 }
 
 .map-popup-show {
@@ -2131,30 +2132,6 @@ _:-ms-fullscreen, :root .footer-adress {
           animation-name: move-left;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
-}
-
-@-webkit-keyframes move-left {
-  0%   {margin-right: -10000px;}
-  5%   {margin-right:  -1500px;}
-  10%  {margin-right:  -1200px;}
-  15%  {margin-right:  -1150px;}
-  20%  {margin-right:  -1100px;}
-  25%  {margin-right:  -1050px;}
-  30%  {margin-right:  -1000px;}
-  35%  {margin-right:  -950px;}
-  40%  {margin-right:  -900px;}
-  45%  {margin-right:  -850px;}
-  50%  {margin-right:  -800px;}
-  55%  {margin-right:  -750px;}
-  60%  {margin-right:  -700px;}
-  65%  {margin-right:  -650px;}
-  70%  {margin-right:  -600px;}
-  75%  {margin-right:  -550px;}
-  80%  {margin-right:  -500px;}
-  85%  {margin-right:  -450px;}
-  90%  {margin-right:  -350px;}
-  95%  {margin-right:  -400px;}
-  100% {margin-right:  -480px;}
 }
 
 @-webkit-keyframes move-left {
