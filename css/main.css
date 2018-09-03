@@ -1026,7 +1026,7 @@ _:-ms-fullscreen, :root .first-slider-item .third-slide-image {
   text-align: left;
   margin: 0;
   padding: 0;
-  word-break: break-all;
+  word-wrap: break-word;
 }
 
 _:-ms-fullscreen, :root .popular-goods-item h3 {
@@ -2132,8 +2132,6 @@ _:-ms-fullscreen, :root .footer-adress {
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
 }
-
-.
 
 @-webkit-keyframes move-left {
   0%   {margin-right: -10000px;}
