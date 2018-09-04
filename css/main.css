@@ -2922,7 +2922,7 @@ _:-ms-fullscreen, :root .footer-adress {
   left: 0;
   text-align: center;
   z-index: 2;
-  margin: 0 79px;
+  margin: 0 80px;
 }
 
 .catalog-image-wrapper:hover .catalog-image-buttons-list {
@@ -2935,8 +2935,10 @@ _:-ms-fullscreen, :root .footer-adress {
   line-height: 24px;
   font-weight: 800;
   letter-spacing: 0.2em;
-  padding: 7px 37px 7px 37px;
+  padding: 7px 10px 7px 10px;
   margin-bottom: 6px;
+  min-width: 200px;
+  text-align: center;
   color: black;
   background-color: transparent;
   border: none;
