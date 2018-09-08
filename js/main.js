@@ -10,9 +10,11 @@ var map_close = map.querySelector(".button-close");
 
 var support_storage = true;
 var storage_name = "";
+var storage_email = "";
 
 try {
   storage_name = localStorage.getItem("login");
+  storage_email = localStorage.getItem("email");
 }
 catch (err) {
   support_storage = false;
@@ -25,9 +27,13 @@ feedback_button.addEventListener("click", function (evt) {
     storage_name = login.value;
     email.focus();
   }
-  else {
-    login.focus();
-  }
+
+  if (storage_email) {
+    storage_email = email.value;
+    comment.focus();
+  } else {
+      login.focus();
+    }
 });
 
 form.addEventListener("submit", function(evt) {
@@ -38,8 +44,9 @@ form.addEventListener("submit", function(evt) {
     feedback.classList.add("error-show");
   } else {
 
-    if (storage_name) {
+    if (storage_name || storage_email) {
       localStorage.setItem("login", login.value);
+      localStorage.setItem("email", email.value);
     }
   }
 });
